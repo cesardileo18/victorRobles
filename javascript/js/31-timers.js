@@ -23,7 +23,7 @@ window.addEventListener('load', function(){
     //     }else{
     //         encbezado.style.fontSize = "50px"
     //     }
-    // }, 5000); // Acá van los segundos en que quieres que se ejecute la funcion
+    // }, 5000); // Acá van los segundos en que quieres que se ejecute Funcion
     var tiempo = intervalo();
     var stop = document.querySelector("#stop");
     stop.addEventListener("click", function(){
