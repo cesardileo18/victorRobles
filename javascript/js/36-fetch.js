@@ -1,6 +1,7 @@
 'use strict'
 
 var div_usuarios = document.querySelector("#usuarios")
+var div_janet = document.querySelector("#janet")
 
 
       getUsuarios()
@@ -12,7 +13,11 @@ var div_usuarios = document.querySelector("#usuarios")
         listadoUsuarios(users);
         return getJanet();
       })
-      .then 
+      .then(data=>data.json())
+      .then(user =>{
+
+        mostrarJanet(user.data)
+      })
       ;
 
       function getUsuarios(){
@@ -36,3 +41,24 @@ var div_usuarios = document.querySelector("#usuarios")
             setTimeout(mensaje,1000);
         })
       }
+      function mostrarJanet(user){
+          let nombre = document.createElement('h3')
+          let avatar = document.createElement('img')
+
+          nombre.innerHTML = user.first_name ;
+          console.log('Imagen----------------------------------',user.avatar)
+          avatar.src = user.avatar;
+          user.avatar = avatar;
+          avatar.width="100";
+          div_janet.appendChild(nombre);
+          console.log(`entra1`)
+          div_janet.appendChild(avatar);
+          console.log(avatar)
+      
+        
+          function mensaje() {
+            document.querySelector(".loading2").style.display = 'none';
+          }
+          setTimeout(mensaje,1000);
+
+    }
