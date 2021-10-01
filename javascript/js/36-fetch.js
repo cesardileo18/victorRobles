@@ -1,15 +1,27 @@
 'use strict'
 
 var div_usuarios = document.querySelector("#usuarios")
-//Fetch peticiones a servicios / apis rest
 
-fetch('https://jsonplaceholder.typicode.com/users')
+
+      getUsuarios()
 //Con el then recogo los datos, el callback es data, recibe data y lo convierte a json
       .then(data => data.json())
+      //Fetch peticiones a servicios / apis rest
       //Recogemos de nuvo la data, funcion de callback
       .then(users =>{
-        listadoUsuarios(users)
-      });
+        listadoUsuarios(users);
+        return getJanet();
+      })
+      .then 
+      ;
+
+      function getUsuarios(){
+        return fetch('https://jsonplaceholder.typicode.com/users')
+      }
+      function getJanet(){
+        return fetch('https://reqres.in/api/users/2')
+      }
+      
       function listadoUsuarios(usuarios){
           usuarios.map((user, i) =>{
 
