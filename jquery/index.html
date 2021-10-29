@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +7,42 @@
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/01-selectores.js"></script>
     <title>Aprendiendo Jquery</title>
-    <h1>Aprendiendo Jquery</h1>
-    <p id="rojo">Ejercicios de Jquery rojo</p>
-    <p id="amarillo">Practicando con selectores</p>
-    <p id="verde">Quiero ser parrafo verde</p>
+
+    <style>
+        .zebra{
+            border: 5px dashed black;
+        }
+        .grande{
+            font-size: 30px;
+        }
+        .margen-superior{
+            display: block;
+            margin-top: 45px;
+        }
+        .resaltado{
+            border-bottom: 2px solid green;
+        }
+    </style>
 </head>
-
 <body>
+    <h1>Aprendiendo Jquery</h1>
+    <ul>
+        <li><a href="https://wwww.google.com.ar" title="Google">Ir a google</a></li>
+        <li><a href="https://wwww.facebook.com" title="Facebook">Ir a facebook</a></li>
+    </ul>
+    <p id="rojo"class="sin-borde">Ejercicios de Jquery rojo</p>
+    <p id="amarillo"class="zebra">Practicando con selectores</p>
+    <p id="verde"class="sin-borde">Quiero ser parrafo verde</p>
+    <p id="verde"class="zebra">Soy un parrafo blanco</p>
 
+    <div id="caja">
+        <p>Hola Soy una Caja</p>
+        <ul>
+            <li>Elemento 1</li>
+            <li id="elemento2">Elemento 2</li>
+        </ul>
+        <span class="resaltado">Soy un span </span>
+    </div>
 </body>
 
 </html>
